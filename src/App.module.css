@@ -6,28 +6,39 @@
   min-height: 100vh;
   min-width: 100vw; 
   background-color: var(--COLOR_SECUNDARIO);
-  /* align-items: center; */
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  /* flex-direction: row; */
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .proyectos {
-  width: 60%;
   /* background-color: red; */
+  display: grid;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .aplicaciones {
-  width: 40%;
-  /* background-color: blue; */
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: auto;
+  display: contents;
   justify-items: center;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
 }
+
+
 
 
 

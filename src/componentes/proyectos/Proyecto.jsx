@@ -1,10 +1,8 @@
 import React from 'react';
 import styles from './Proyecto.module.css'
+import { IconBrandGithub, IconWorld } from '@tabler/icons-react'
 
 const Proyecto = (props) => {
-
-    const Icono1 = props.icono1
-    const Icono2 = props.icono2
 
     return (
         <div className={styles.proyectoContainer}>
@@ -15,10 +13,10 @@ const Proyecto = (props) => {
                 <h2 className={styles.titulo}>{props.titulo}</h2>
                 <div className={styles.navegacionContainer}>
                     <a href={props.enlace1} target="_blank">
-                        <Icono1 className={styles.icono} size={80}/>
+                        <IconBrandGithub className={styles.icono} size={80}/>
                     </a>
                     <a href={props.enlace2} target="_blank">
-                        <Icono2 className={styles.icono} size={80}/>
+                        <IconWorld className={styles.icono} size={80}/>
                     </a>
                 </div>
             </div>

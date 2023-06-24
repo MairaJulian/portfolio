@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './Aplicaciones.module.css'
+import { IconBrandGithub } from '@tabler/icons-react'
 
 const Aplicaciones = (props) => {
-
-    const Icono1 = props.icono1
 
     return (
         <div className={styles.aplicacionesContainer}>
@@ -14,7 +13,7 @@ const Aplicaciones = (props) => {
                 <h2 className={styles.titulo}>{props.titulo}</h2>
                 <div className={styles.navegacionContainer}>
                     <a href={props.enlace1} target="_blank">
-                        <Icono1 className={styles.icono} size={40}/>
+                        <IconBrandGithub className={styles.icono} size={40}/>
                     </a>
                 </div>
             </div>
