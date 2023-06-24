@@ -1,0 +1,32 @@
+@import '../../constantes/colores/colores.css';
+
+.aplicacionesContainer {
+    background-color: black;
+    margin: 30px;
+    margin-left: 100px;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.imagen {
+    width: 285px;
+    height: 400px;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+.tituloContainer {
+    display: flex;
+}
+
+.titulo {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-right: 30px;
+    margin-left: 15px;
+}
+
+.icono {
+    margin-left: 10px;
+}
