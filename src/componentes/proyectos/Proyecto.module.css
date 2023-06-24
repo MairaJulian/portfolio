@@ -1,0 +1,43 @@
+@import '../../constantes/colores/colores.css';
+
+.proyectoContainer {
+    background-color: var(--COLOR_SECUNDARIO);
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #000000;
+    width: 60%;
+}
+
+.imagen {
+    width: 400px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.tituloContainer {
+    display: flex;
+    /* background-color: green; */
+    width: 100%;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    flex-direction: column; /* Opcional: alinea verticalmente los elementos */
+    text-align: center; /* Opcional: alinea horizontalmente el texto */
+}
+
+.titulo {
+    font-size: 40px;
+}
+
+.navegacionContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.icono:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-out;
+    /* transition: transform 0.3s ease-in; */
+}

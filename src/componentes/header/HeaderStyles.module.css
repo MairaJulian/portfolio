@@ -1,0 +1,18 @@
+@import '../../constantes/colores/colores.css';
+
+.headerContainer {
+    background-color: var(--COLOR_PRIMARIO);
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: black 5px 5px 20px;
+    border: solid 30px var(--COLOR_TERCIARIO);
+    /* padding-left: 30px; */
+    width: 82vw;
+}
