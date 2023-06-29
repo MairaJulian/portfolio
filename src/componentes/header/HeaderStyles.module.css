@@ -12,7 +12,7 @@
     align-items: baseline;
     height: 500px;
     border-radius: 20px;
-    box-shadow: black 5px 5px 20px;
+    /* box-shadow: black 5px 5px 20px; */
     border: solid 30px var(--COLOR_TERCIARIO);
     /* padding-left: 30px; */
     width: 82vw;

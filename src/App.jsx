@@ -6,6 +6,17 @@ import mytools from './imagenes/mytools.png'
 import rickandmorty from './imagenes/rickandmorty.png'
 import giff from './imagenes/giff.png'
 import Aplicaciones from './componentes/aplicaciones/Aplicaciones'
+import qr_android_01 from './imagenes/codigosQR/01_qr_android.png'
+import qr_android_02 from './imagenes/codigosQR/02_qr_android.png'
+import qr_android_03 from './imagenes/codigosQR/03_qr_android.png'
+import qr_ios_01 from './imagenes/codigosQR/01_qr_ios.png'
+import qr_ios_02 from './imagenes/codigosQR/02_qr_ios.png'
+import qr_ios_03 from './imagenes/codigosQR/02_qr_ios.png'
+import gif01 from './imagenes/gif/01.gif'
+import gif02 from './imagenes/gif/02.gif'
+import gif03 from './imagenes/gif/03.gif'
+import android from './imagenes/android.png'
+import ios from './imagenes/ios.png'
 
 function App() {
   
@@ -24,52 +35,52 @@ function App() {
       imagenSrc: rickandmorty,
       imagenAlt: "rick_and_morty",
       enlace1: 'https://github.com/MairaJulian/ProyectoRickAndMorty',
-      enlace2: ''
+      enlace2: 'https://rick-and-morty-search-web.netlify.app/'
     },
     {id: 3,
       titulo: 'Buscador de Giff',
       imagenSrc: giff,
       imagenAlt: "giff",
       enlace1: 'https://github.com/MairaJulian/buscador-de-gif',
-      enlace2: ''
+      enlace2: 'https://buscador-de-giff.netlify.app/'
     },
-    {id: 4,
-      titulo: 'Buscador de Giff',
-      imagenSrc: giff,
-      imagenAlt: "giff",
-      enlace1: 'https://github.com/MairaJulian/buscador-de-gif',
-      enlace2: ''
-    }
+    
   ]
 
   const aplicaciones = [
     {
       id: 1,
       titulo: 'Buscador de Recetas',
-      imagenSrc: rickandmorty,
+      imagenSrc: gif01,
       imagenAlt: "buscador_de_recetas",
-      enlace1: 'https://github.com/MairaJulian/buscador-de-gif',
+      enlace1: 'https://github.com/MairaJulian/app-de-recetas-vegetarianas',
+      qrAndroid: qr_android_01,
+      qrIos: qr_ios_01
     },
     {
       id: 2,
       titulo: 'Lista de compras',
-      imagenSrc: rickandmorty,
+      imagenSrc: gif02,
       imagenAlt: "lista_de_compras",
-      enlace1: 'https://github.com/MairaJulian/buscador-de-gif',
+      enlace1: 'https://github.com/MairaJulian/app-lista-de-compras',
+      qrAndroid: qr_android_02,
+      qrIos: qr_ios_02
     },
     {
       id: 3,
       titulo: 'Estacionamiento',
-      imagenSrc: rickandmorty,
+      imagenSrc: gif03,
       imagenAlt: "estacionamiento",
-      enlace1: 'https://github.com/MairaJulian/app-de-recetas-vegetarianas',
+      enlace1: 'https://github.com/MairaJulian/app-estacionamiento',
+      qrAndroid: qr_android_03,
+      qrIos: qr_ios_03
     },
     {
       id: 4,
-      titulo: 'Estacionamiento',
-      imagenSrc: rickandmorty,
-      imagenAlt: "estacionamiento",
-      enlace1: 'https://github.com/MairaJulian/app-de-recetas-vegetarianas',
+      titulo: 'Prueba',
+      imagenSrc: gif01,
+      imagenAlt: "prueba",
+      enlace1: '',
     },
   ]
 
@@ -78,6 +89,9 @@ function App() {
       <Header/>
       <div className={styles.container}>
         <div className={styles.proyectos}>
+        <div>
+            <h1>WEB SITES</h1>
+        </div>
           {
             proyectos.map((proyecto)=>(
               <Proyecto
@@ -92,6 +106,19 @@ function App() {
           }
         </div>
         <div className={styles.aplicaciones}>
+        <div className={styles.descargasContainer}>
+            <h1>APLICATIONS</h1>
+            <h3>Download Expo Go App</h3>
+            <div className={styles.enlacesContainer}>
+              <a href='https://play.google.com/store/apps/details?id=host.exp.exponent' target='_blank'>
+                <img src={android}/>
+              </a>
+              <a href='https://apps.apple.com/ar/app/expo-go/id982107779' target='_blank'>
+                <img src={ios}/>
+              </a>
+            </div>
+            <h3>Scan a QR Code to test it</h3>
+        </div>
           {
             aplicaciones.map((aplicacion)=>(
               <Aplicaciones
@@ -100,6 +127,8 @@ function App() {
                 imagenSrc={aplicacion.imagenSrc}
                 imagenAlt={aplicacion.imagenAlt}
                 enlace1={aplicacion.enlace1}
+                qrAndroid={aplicacion.qrAndroid}
+                qrIos={aplicacion.qrIos}
               />
             ))
           }
