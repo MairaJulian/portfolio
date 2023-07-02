@@ -90,7 +90,7 @@ function App() {
       <div className={styles.container}>
         <div className={styles.proyectos}>
         <div>
-            <h1>WEB SITES</h1>
+            <h1>SITIOS WEB</h1>
         </div>
           {
             proyectos.map((proyecto)=>(
@@ -106,9 +106,9 @@ function App() {
           }
         </div>
         <div className={styles.aplicaciones}>
-        <div className={styles.descargasContainer}>
-            <h1>APLICATIONS</h1>
-            <h3>Download Expo Go App</h3>
+          <div className={styles.descargasContainer}>
+            <h1>APLICACIONES MÓVILES</h1>
+            <h3>Descarga Expo Go App</h3>
             <div className={styles.enlacesContainer}>
               <a href='https://play.google.com/store/apps/details?id=host.exp.exponent' target='_blank'>
                 <img src={android}/>
@@ -117,21 +117,23 @@ function App() {
                 <img src={ios}/>
               </a>
             </div>
-            <h3>Scan a QR Code to test it</h3>
-        </div>
-          {
-            aplicaciones.map((aplicacion)=>(
-              <Aplicaciones
-                key={aplicacion.id}
-                titulo={aplicacion.titulo}
-                imagenSrc={aplicacion.imagenSrc}
-                imagenAlt={aplicacion.imagenAlt}
-                enlace1={aplicacion.enlace1}
-                qrAndroid={aplicacion.qrAndroid}
-                qrIos={aplicacion.qrIos}
-              />
-            ))
-          }
+            <h3>Escanea un código QR para probarlo</h3>
+          </div>
+          <div className={styles.aplicacionesContainer}>
+            {
+              aplicaciones.map((aplicacion)=>(
+                <Aplicaciones
+                  key={aplicacion.id}
+                  titulo={aplicacion.titulo}
+                  imagenSrc={aplicacion.imagenSrc}
+                  imagenAlt={aplicacion.imagenAlt}
+                  enlace1={aplicacion.enlace1}
+                  qrAndroid={aplicacion.qrAndroid}
+                  qrIos={aplicacion.qrIos}
+                />
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

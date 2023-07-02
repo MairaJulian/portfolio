@@ -33,7 +33,7 @@ export default function Card() {
         <img src={laptop} className={styles.teclado} alt="Laptop"/>
       </div>
       <div className={styles.nombreContainer}>
-        <h2 className={styles.nombre}>Hi! I am Maira Julián</h2>
+        <h2 className={styles.nombre}>Hola! Soy Maira Julián</h2>
       </div>
       <div className={styles.githubContainer}>
         <a href='https://github.com/MairaJulian' target="_blank">
