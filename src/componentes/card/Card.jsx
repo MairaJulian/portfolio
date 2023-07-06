@@ -22,11 +22,11 @@ export default function Card() {
 
   return (
     <div className={styles.pizarra}>
-      <div className={styles.arcoirisContainer}>
+      {/* <div className={styles.arcoirisContainer}>
         <img src={arcoiris} className={styles.arcoiris} alt="Arcoiris"/>
-      </div>
+      </div> */}
       <div className={styles.fotoContainer}>
-          <img src={imagenFoto} className={styles.imagen} alt="Foto"/>
+          <img src={imagenFoto} className={styles.foto} alt="Foto"/>
           
       </div>
       <div className={styles.tecladoContainer}>

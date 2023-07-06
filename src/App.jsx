@@ -38,7 +38,7 @@ function App() {
       enlace2: 'https://rick-and-morty-search-web.netlify.app/'
     },
     {id: 3,
-      titulo: 'Buscador de Giff',
+      titulo: 'Buscador de Gif',
       imagenSrc: giff,
       imagenAlt: "giff",
       enlace1: 'https://github.com/MairaJulian/buscador-de-gif',
@@ -89,26 +89,28 @@ function App() {
       <Header/>
       <div className={styles.container}>
         <div className={styles.proyectos}>
-        <div>
-            <h1>SITIOS WEB</h1>
-        </div>
-          {
-            proyectos.map((proyecto)=>(
-              <Proyecto
-                key={proyecto.id}
-                titulo={proyecto.titulo}
-                imagenSrc={proyecto.imagenSrc}
-                imagenAlt={proyecto.imagenAlt}
-                enlace1={proyecto.enlace1}
-                enlace2={proyecto.enlace2}
-              />
-            ))
-          }
+          <div>
+              <h1>SITIOS WEB</h1>
+          </div>
+          <div className={styles.proyectosContainer}>
+              {
+                proyectos.map((proyecto)=>(
+                  <Proyecto
+                    key={proyecto.id}
+                    titulo={proyecto.titulo}
+                    imagenSrc={proyecto.imagenSrc}
+                    imagenAlt={proyecto.imagenAlt}
+                    enlace1={proyecto.enlace1}
+                    enlace2={proyecto.enlace2}
+                  />
+                ))
+              }
+          </div>
         </div>
         <div className={styles.aplicaciones}>
           <div className={styles.descargasContainer}>
             <h1>APLICACIONES MÓVILES</h1>
-            <h3>Descarga Expo Go App</h3>
+            <h2>Descarga Expo Go App</h2>
             <div className={styles.enlacesContainer}>
               <a href='https://play.google.com/store/apps/details?id=host.exp.exponent' target='_blank'>
                 <img src={android}/>
@@ -117,7 +119,7 @@ function App() {
                 <img src={ios}/>
               </a>
             </div>
-            <h3>Escanea un código QR para probarlo</h3>
+            <h2>Escanea un código QR para probarlo</h2>
           </div>
           <div className={styles.aplicacionesContainer}>
             {

@@ -1,46 +1,76 @@
 @import '../../constantes/colores/colores.css';
 
 .proyectoContainer {
-    /* background-color: var(--FONDO); */
+    /* background-color: red; */
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
     margin-bottom: 40px;
     border-radius: 10px;
     /* box-shadow: 2px 2px 6px #000000; */
-    width: 80%;
+    width: 100%;
     /* height: 100px; */
 }
 
 .imagenContainer {
-    /* background-color: white; */
+    perspective: 800px;
+    /* background-color: green; */
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    /* width: 600px; */
+    height: 300px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, .25);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 900px;
-    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card:hover {
+    transform: translateZ(10px) rotateX(20deg) rotateY(30deg);
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform .5s;
+
+}
+
+.card:hover .title {
+    transform: translateZ(50px);
 }
 
 .imagen {
-    width: 93%;
-    height: 93%;
-    margin: 10px;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #000000;
-    border-width: 5px;
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.4s;
+    border-radius: 10px;
+    /* border-style: solid;
+    border-color: #3d3d3d;
+    border-width: 5px; */
 }
 
-/* .imagen:hover {
-    box-shadow: 5px 10px 20px 2px rgba(3, 3, 3, 0.548) !important;
-    transition: all 0.5s linear;
-} */
+.imagen:hover {
+    opacity: 1;
+    
+}
 
 .tituloContainer {
     display: flex;
-    width: 100%;
+    width: 70%;
     align-items: center; /* Centra verticalmente los elementos */
     justify-content: center; /* Centra horizontalmente los elementos */
     flex-direction: column; /* Opcional: alinea verticalmente los elementos */
@@ -48,14 +78,64 @@
 }
 
 .titulo {
-    font-size: 30px;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+    font-size: 70px;
+    color: black;
+    text-shadow: 2px 2px 4px white;
+    /* background-color: black; */
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .titulo {
+        font-size: 60px;
+    }
+    .icono {
+        width: 70px;
+    }
+}
+@media (max-width: 780px) {
+    .titulo {
+        font-size: 50px;
+    }
+    .icono {
+        width: 60px;
+    }
+}
+@media (max-width: 650px) {
+    .titulo {
+        font-size: 40px;
+    }
+    .icono {
+        size: 50px;
+    }
+}
+@media (max-width: 500px) {
+    .titulo {
+        font-size: 30px;
+    }
+}
+@media (max-width: 375px) {
+    .titulo {
+        font-size: 20px;
+    }
 }
 
 .navegacionContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    /* justify-content: left; */
+    align-items: start;
+    /* margin-left: 100px; */
+    /* background-color: green; */
+    width: 60%;
+    
+}
+
+.icono {
+    /* width: 500px; */
+    filter: drop-shadow(1px 1px 0px black);
+    position: relative;
+    
 }
 
 .icono:hover {
