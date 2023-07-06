@@ -88,4 +88,38 @@ h3 {
     transition: transform 0.2s ease-out;
 }
 
+@media (max-width: 700px) {
+    .aplicacionesContainer {
+        width: 70%;
+    }
+    .qrAndroid {
+        width: 60%;
+    }
+    .qrIos {
+        width: 60%;
+    }
+}
+@media (max-width: 550px) {
+    .aplicacionesContainer {
+        width: 70%;
+    }
+    .qrAndroid {
+        width: 60%;
+    }
+    .qrIos {
+        width: 60%;
+    }
+}
+@media (max-width: 400px) {
+    .aplicacionesContainer {
+        width: 70%;
+    }
+    .qrAndroid {
+        width: 60%;
+    }
+    .qrIos {
+        width: 60%;
+    }
+}
+
 
