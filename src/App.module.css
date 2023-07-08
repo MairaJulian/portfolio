@@ -75,12 +75,71 @@
   justify-content: space-evenly;
 }
 
-h1 {
+.titulo {
   color: var(--COLOR_PRIMARIO);
-  
 }
+
+@media (max-width: 700px) {
+  .titulo {
+    font-size: 40px;
+  }
+}
+@media (max-width: 550px) {
+  .titulo {
+    font-size: 30px;
+  }
+  .subTitulo {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .titulo {
+    font-size: 25px;
+  }
+  .subTitulo {
+    font-size: 18px;
+  }
+}
+
 h2 {
   color: var(--COLOR_PRIMARIO);
+}
+
+.android {
+  filter: drop-shadow(1px 1px 1px black);
+  /* animation: ilumination 3s infinite; */
+}
+
+.enlace {
+  animation: ilumination 3s infinite;
+}
+
+@keyframes ilumination {
+  0% {
+    filter: drop-shadow(0 0 0px rgb(255, 1, 191));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgb(255, 1, 191));
+  }
+  100% {
+    filter: drop-shadow(0 0 0px rgb(255, 1, 191));
+  }
+}
+
+/* @keyframes ilumination {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+.ios {
+  filter: drop-shadow(1px 1px 1px black);
 }
 
 

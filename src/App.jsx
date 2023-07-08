@@ -17,6 +17,8 @@ import gif02 from './imagenes/gif/02.gif'
 import gif03 from './imagenes/gif/03.gif'
 import android from './imagenes/android.png'
 import ios from './imagenes/ios.png'
+import union1 from './imagenes/union1.svg'
+import union2 from './imagenes/union2.svg'
 
 function App() {
   
@@ -75,22 +77,23 @@ function App() {
       qrAndroid: qr_android_03,
       qrIos: qr_ios_03
     },
-    {
-      id: 4,
-      titulo: 'Prueba',
-      imagenSrc: gif01,
-      imagenAlt: "prueba",
-      enlace1: '',
-    },
+    // {
+    //   id: 4,
+    //   titulo: 'Prueba',
+    //   imagenSrc: gif01,
+    //   imagenAlt: "prueba",
+    //   enlace1: '',
+    // },
   ]
 
   return (
     <div className={styles.App}>
       <Header/>
+      <img src={union1} alt='imagen svg' className={styles.union}/>
       <div className={styles.container}>
         <div className={styles.proyectos}>
           <div>
-              <h1>SITIOS WEB</h1>
+              <h1 className={styles.titulo}>SITIOS WEB</h1>
           </div>
           <div className={styles.proyectosContainer}>
               {
@@ -107,19 +110,20 @@ function App() {
               }
           </div>
         </div>
+        <img src={union2} alt='imagen svg' className={styles.union}/>
         <div className={styles.aplicaciones}>
           <div className={styles.descargasContainer}>
-            <h1>APLICACIONES MÓVILES</h1>
-            <h2>Descarga Expo Go App</h2>
+            <h1 className={styles.titulo}>APLICACIONES MÓVILES</h1>
+            <h2 className={styles.subTitulo}>Descarga Expo Go App</h2>
             <div className={styles.enlacesContainer}>
-              <a href='https://play.google.com/store/apps/details?id=host.exp.exponent' target='_blank'>
-                <img src={android}/>
+              <a href='https://play.google.com/store/apps/details?id=host.exp.exponent' target='_blank' className={styles.enlace}>
+                <img src={android} alt="android" className={styles.android}/>
               </a>
-              <a href='https://apps.apple.com/ar/app/expo-go/id982107779' target='_blank'>
-                <img src={ios}/>
+              <a href='https://apps.apple.com/ar/app/expo-go/id982107779' target='_blank' className={styles.enlace}>
+                <img src={ios} alt="ios" className={styles.ios}/>
               </a>
             </div>
-            <h2>Escanea un código QR para probarlo</h2>
+            <h2 className={styles.subTitulo}>Escanea un código QR para probarlo</h2>
           </div>
           <div className={styles.aplicacionesContainer}>
             {
