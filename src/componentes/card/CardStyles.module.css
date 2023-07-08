@@ -167,10 +167,32 @@
 
 .focoContainer {
     position: absolute;
-    top: 30px;
+    top: 70px;
     left: 880px;
     width: 50%;
     height: 50%;
+    animation: ilumination 3s infinite;
+}
+
+@media (max-width:1115px) {
+    .focoContainer {
+        left: 600px;
+    }
+    /* .modal {
+        justify-content: center;
+        align-items: center;
+    } */
+}
+@media (max-width:970px) {
+    .focoContainer {
+        left: 150px;
+    }
+}
+@media (max-width:360px) {
+    .focoContainer {
+        left: 100px;
+        top: 30px;
+    }
 }
 
 .foco {
@@ -180,6 +202,34 @@
     /* box-shadow: 0 0 20px black; */
     filter: drop-shadow(2px 2px 1px black);
 }
+
+@keyframes ilumination {
+    0% {
+      filter: drop-shadow(0 0 0px rgb(238, 255, 1));
+    }
+    50% {
+      filter: drop-shadow(0 0 10px rgb(238, 255, 1));
+    }
+    100% {
+      filter: drop-shadow(0 0 0px rgb(238, 255, 1));
+    }
+  } 
+
+/* .enlace {
+    animation: ilumination 3s infinite;
+  }
+  
+  @keyframes ilumination {
+    0% {
+      filter: drop-shadow(0 0 0px rgb(255, 1, 191));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px rgb(255, 1, 191));
+    }
+    100% {
+      filter: drop-shadow(0 0 0px rgb(255, 1, 191));
+    }
+  } */
 
 .foco:hover {
     /* transition: transform 0.2s ease-out;

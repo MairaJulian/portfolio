@@ -22,9 +22,6 @@ export default function Card() {
 
   return (
     <div className={styles.pizarra}>
-      {/* <div className={styles.arcoirisContainer}>
-        <img src={arcoiris} className={styles.arcoiris} alt="Arcoiris"/>
-      </div> */}
       <div className={styles.fotoContainer}>
           <img src={imagenFoto} className={styles.foto} alt="Foto"/>
           
@@ -57,7 +54,7 @@ export default function Card() {
       </div>
       <div className={styles.focoContainer}>
         <img  src={foco} className={styles.foco} alt="Foco" onClick={handleClick}/>
-        {modal && <Modal setModal={setModal} />}
+        {modal && <Modal setModal={setModal} className={styles.modal}/>}
       </div>
     </div>
   )

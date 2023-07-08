@@ -138,8 +138,12 @@ h2 {
   }
 } */
 
-.ios {
+/* .ios {
   filter: drop-shadow(1px 1px 1px black);
+} */
+
+.union {
+  width: 100%;
 }
 
 
