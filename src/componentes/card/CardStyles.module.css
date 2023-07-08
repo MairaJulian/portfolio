@@ -171,17 +171,13 @@
     left: 880px;
     width: 50%;
     height: 50%;
-    animation: ilumination 3s infinite;
+    animation: ilumination 1s infinite;
 }
 
 @media (max-width:1115px) {
     .focoContainer {
         left: 600px;
     }
-    /* .modal {
-        justify-content: center;
-        align-items: center;
-    } */
 }
 @media (max-width:970px) {
     .focoContainer {

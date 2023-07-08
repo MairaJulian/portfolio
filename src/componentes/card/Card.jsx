@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styles from './CardStyles.module.css'
 import imagenFoto from '../../imagenes/imagen13.png'
-import arcoiris from '../../imagenes/arcoiris.png'
 import foco from '../../imagenes/foco.png'
 import laptop from '../../imagenes/laptop.jpeg'
 import cv from '../../imagenes/CV/cv.pdf'
