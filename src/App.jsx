@@ -52,7 +52,7 @@ function App() {
   const aplicaciones = [
     {
       id: 1,
-      titulo: 'Buscador de Recetas',
+      titulo: 'BUSCADOR DE RECETAS',
       imagenSrc: gif01,
       imagenAlt: "buscador_de_recetas",
       enlace1: 'https://github.com/MairaJulian/app-de-recetas-vegetarianas',
@@ -61,7 +61,7 @@ function App() {
     },
     {
       id: 2,
-      titulo: 'Lista de compras',
+      titulo: 'LISTA DE COMPRAS',
       imagenSrc: gif02,
       imagenAlt: "lista_de_compras",
       enlace1: 'https://github.com/MairaJulian/app-lista-de-compras',
@@ -70,7 +70,7 @@ function App() {
     },
     {
       id: 3,
-      titulo: 'Estacionamiento',
+      titulo: 'ESTACIONAMIENTO',
       imagenSrc: gif03,
       imagenAlt: "estacionamiento",
       enlace1: 'https://github.com/MairaJulian/app-estacionamiento',

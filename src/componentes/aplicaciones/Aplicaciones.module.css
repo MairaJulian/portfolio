@@ -1,7 +1,7 @@
 @import '../../constantes/colores/colores.css';
 
 .aplicacionesContainer {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.842);
     margin: 30px;
     /* margin-left: 100px; */
     width: 40%;
@@ -46,16 +46,16 @@ h3 {
 }
 
 .imagenContainer {
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    /* margin-top: 10px; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
 }
 
 .imagen {
@@ -67,14 +67,17 @@ h3 {
 
 .tituloContainer {
     display: flex;
+    /* width: 100%; */
+    /* background-color: red; */
 }
 
 .titulo {
-    font-size: 22px;
+    font-size: 25px;
     margin-top: 15px;
     margin-right: 30px;
     margin-left: 5px;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .icono {

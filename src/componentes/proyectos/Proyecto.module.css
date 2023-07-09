@@ -42,7 +42,6 @@
     right: 10px;
     transform: translateY(-50%);
     transition: transform .5s;
-
 }
 
 .card:hover .title {
@@ -54,15 +53,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     transition: opacity 0.4s;
     border-radius: 10px;
 }
 
-.imagen:hover {
+/* .imagen:hover {
     opacity: 1;
     
-}
+} */
 
 .tituloContainer {
     /* background-color: blue; */
@@ -77,9 +76,11 @@
 .titulo {
     font-size: 70px;
     color: black;
-    text-shadow: 2px 2px 4px white;
-    /* background-color: black; */
+    text-shadow: 1px 1px 14px rgb(255, 255, 255);
+    /* background-color: rgba(253, 109, 210, 0.61); */
     border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 5px;
 }
 
 @media (max-width: 900px) {
