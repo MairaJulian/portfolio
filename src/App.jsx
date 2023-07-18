@@ -4,7 +4,7 @@ import Header from './componentes/header/Header'
 import Proyecto from './componentes/proyectos/Proyecto'
 import mytools from './imagenes/mytools.png'
 import rickandmorty from './imagenes/rickandmorty.png'
-import giff from './imagenes/giff.png'
+import gif from './imagenes/gif.png'
 import Aplicaciones from './componentes/aplicaciones/Aplicaciones'
 import qr_android_01 from './imagenes/codigosQR/01_qr_android.png'
 import qr_android_02 from './imagenes/codigosQR/02_qr_android.png'
@@ -41,8 +41,8 @@ function App() {
     },
     {id: 3,
       titulo: 'Buscador de Gif',
-      imagenSrc: giff,
-      imagenAlt: "giff",
+      imagenSrc: gif,
+      imagenAlt: "gif",
       enlace1: 'https://github.com/MairaJulian/buscador-de-gif',
       enlace2: 'https://buscador-de-giff.netlify.app/'
     },
