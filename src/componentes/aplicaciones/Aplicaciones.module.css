@@ -3,11 +3,8 @@
 .aplicacionesContainer {
     background-color: rgba(0, 0, 0, 0.842);
     margin: 30px;
-    /* margin-left: 100px; */
     width: 40%;
     height: auto;
-    /* width: 450px;
-    height: 580px; */
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -16,16 +13,14 @@
 }
 
 .gifContainer {
-    /* background-color: red; */
-    width: 70%;
+    width: 30vw;
 }
 
 .qrContainer {
-    /* background-color: green; */
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 80%;
+    width: 30vw;
     align-items: center;
     text-align: center;
     align-content: center;
@@ -38,24 +33,20 @@ h3 {
 
 .qrAndroid {
     height: auto;
-    width: 70%;
+    width: 15vw;
 }
 .qrIos {
     height: auto;
-    width: 70%;
+    width: 15vw;
 }
 
 .imagenContainer {
-    /* background-color: white; */
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
-    /* margin-top: 10px; */
-    /* padding-left: 10px; */
-    /* padding-right: 10px; */
 }
 
 .imagen {
@@ -67,12 +58,12 @@ h3 {
 
 .tituloContainer {
     display: flex;
-    /* width: 100%; */
-    /* background-color: red; */
+    height: 10vw;
+    width: 20vw;
 }
 
 .titulo {
-    font-size: 25px;
+    font-size: 2vw;
     margin-top: 15px;
     margin-right: 30px;
     margin-left: 5px;

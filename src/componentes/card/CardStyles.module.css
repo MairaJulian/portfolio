@@ -174,7 +174,7 @@
     animation: ilumination 1s infinite;
 }
 
-@media (max-width:1115px) {
+@media (max-width:1310px) {
     .focoContainer {
         left: 600px;
     }

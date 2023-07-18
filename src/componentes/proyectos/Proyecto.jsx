@@ -9,13 +9,10 @@ const Proyecto = (props) => {
             <div className={styles.imagenContainer}>
                 <figure className={styles.card}>
                     <img src={props.imagenSrc} alt={props.imagenAlt} className={styles.imagen}/>
-                    <figcaption className={styles.title}>
-                        <h2 className={styles.titulo}>{props.titulo}</h2>
-                    </figcaption>
                 </figure>
             </div>
             <div className={styles.tituloContainer}>
-                {/* <h2 className={styles.titulo}>{props.titulo}</h2> */}
+                <h2 className={styles.titulo}>{props.titulo}</h2>
                 <div className={styles.navegacionContainer}>
                     <a href={props.enlace1} target="_blank">
                         <IconBrandGithub className={styles.icono} size={40}/>

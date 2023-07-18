@@ -21,7 +21,7 @@ const Aplicaciones = (props) => {
                 <h3>Ios</h3>
                 <img src={props.qrIos} alt={props.imagenAlt} className={styles.qrIos}/>
                 <a href={props.enlace1} target="_blank">
-                    <IconBrandGithub className={styles.icono} size={60}/>
+                    <IconBrandGithub className={styles.icono} size={40}/>
                 </a>
             </div>
         </div>
