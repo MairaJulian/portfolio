@@ -19,6 +19,7 @@ import android from './imagenes/android.png'
 import ios from './imagenes/ios.png'
 import union1 from './imagenes/union1.svg'
 import union2 from './imagenes/union2.svg'
+import licencias from './imagenes/emicar.png'
 
 function App() {
   
@@ -45,6 +46,13 @@ function App() {
       imagenAlt: "gif",
       enlace1: 'https://github.com/MairaJulian/buscador-de-gif',
       enlace2: 'https://buscador-de-giff.netlify.app/'
+    },
+    {id: 4,
+      titulo: 'Licencias de conducir',
+      imagenSrc: licencias,
+      imagenAlt: "licencias",
+      enlace1: 'https://github.com/MathiasFernandez24/Emicar',
+      enlace2: 'https://emicar.netlify.app/'
     },
     
   ]
