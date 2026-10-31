@@ -40,6 +40,14 @@ export default function Glyph({
           <path d="M4 8l8 6 8-6" />
         </>
       )}
+      {nombre === "cart" && (
+        <>
+          <circle cx="9" cy="20" r="1.3" />
+          <circle cx="18" cy="20" r="1.3" />
+          <path d="M3 4h2.5l2.2 11h10.6l2-8H6.2" />
+        </>
+      )}
+      {nombre === "flag" && <path d="M5 21V4M5 4h13l-2.5 4 2.5 4H5" />}
     </svg>
   );
 }

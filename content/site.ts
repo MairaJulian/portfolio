@@ -1,9 +1,9 @@
 // Todo el contenido del sitio vive en este archivo.
 // Cambiá los textos acá y el sitio se actualiza solo.
 // Los elementos con `ejemplo: true` muestran una etiqueta amarilla en la página:
-// reemplazalos por tus datos reales y borrá esa línea.
+// usala para marcar lo que todavía es de relleno y borrala cuando lo completes.
 
-export type NombreIcono = "calendar" | "wallet" | "spark" | "mail";
+export type NombreIcono = "calendar" | "wallet" | "spark" | "mail" | "cart" | "flag";
 
 export type Proyecto = {
   id: string; // se usa en el link interno (#proyecto-<id>)
@@ -17,9 +17,17 @@ export type Proyecto = {
   color: string; // color de fondo del ícono y del panel
   texto: string; // color de texto legible sobre `color`
   icono: NombreIcono;
-  imagen?: string; // ej: "/proyectos/reservas.png" (archivo dentro de /public)
+  imagen?: string; // ej: "/proyectos/changuito.png" (archivo dentro de /public)
   demo?: string;
   codigo?: string;
+  ejemplo?: boolean;
+};
+
+export type Experiencia = {
+  puesto: string;
+  lugar: string;
+  periodo: string;
+  detalle: string;
   ejemplo?: boolean;
 };
 
@@ -30,60 +38,44 @@ export const site = {
     "Portfolio de Maira Julián: apps con React Native, sitios web a medida y automatizaciones con IA.",
   intro:
     "Desarrollo apps con React Native y sitios web a medida. También conecto herramientas y sumo IA para automatizar tareas repetitivas.",
-  email: "tu@correo.com",
-  github: "https://github.com/tu-usuario",
-  linkedin: "https://www.linkedin.com/in/tu-usuario",
+  email: "mairabetianajulianbarros@gmail.com",
+  github: "https://github.com/MairaJulian",
+  linkedin: "https://www.linkedin.com/in/tu-usuario", // pendiente: poné tu link real
   cv: "/cv.pdf", // poné tu CV en la carpeta /public con este nombre
 };
 
 export const proyectos: Proyecto[] = [
   {
-    id: "reservas",
-    nombre: "Reservas",
-    tipo: "App móvil",
-    resumen: "App para reservar turnos y recibir recordatorios.",
+    id: "changuito",
+    nombre: "Changuito",
+    tipo: "App Android",
+    resumen: "Lista de compras compartida que se actualiza en tiempo real.",
     problema:
-      "Un estudio organizaba los turnos por mensajes y los horarios se pisaban.",
+      "En un hogar, la lista de compras suele repartirse en mensajes sueltos y cada uno compra por su cuenta.",
     solucion:
-      "Una app donde cada persona ve los horarios libres, reserva y recibe un recordatorio. El estudio ve la agenda del día.",
-    rol: "Diseño de pantallas y desarrollo completo.",
-    stack: ["React Native", "TypeScript", "Firebase"],
-    color: "#D81B60",
-    texto: "#FFFFFF",
-    icono: "calendar",
-    ejemplo: true,
-  },
-  {
-    id: "gastos",
-    nombre: "Gastos",
-    tipo: "App móvil",
-    resumen: "App para dividir gastos entre amigos o en casa.",
-    problema:
-      "Dividir gastos en un grupo termina en planillas que nadie revisa.",
-    solucion:
-      "Cada integrante carga un gasto y la app calcula quién le debe a quién.",
-    rol: "Desarrollo de la app y de la lógica de cuentas.",
-    stack: ["React Native", "TypeScript", "SQLite"],
+      "Una app donde las personas de un mismo hogar comparten listas y las editan entre todas. Los cambios se ven al instante en el teléfono de cada una.",
+    rol: "Producto, diseño de pantallas y desarrollo completo.",
+    stack: ["React Native", "Expo", "TypeScript", "Firebase"],
     color: "#2FCB9E",
     texto: "#20204A",
-    icono: "wallet",
-    ejemplo: true,
+    icono: "cart",
+    codigo: "https://github.com/MairaJulian/lista-de-compras",
   },
   {
-    id: "evento",
-    nombre: "Evento",
-    tipo: "Sitio web",
-    resumen: "Landing con inscripción por formulario.",
+    id: "vuelta-rapida",
+    nombre: "Vuelta Rápida",
+    tipo: "Juego Android",
+    resumen: "Juego de carreras de monoplazas con vista desde arriba.",
     problema:
-      "Un organizador recibía las inscripciones en mensajes sueltos.",
+      "Quería un juego de carreras propio, apto para chicos, inspirado en la F1 pero sin marcas, equipos ni pilotos reales.",
     solucion:
-      "Una landing rápida con formulario de inscripción y confirmación por correo.",
-    rol: "Diseño y desarrollo (trabajo freelance).",
-    stack: ["Next.js", "Tailwind CSS", "TypeScript"],
-    color: "#FFC857",
-    texto: "#20204A",
-    icono: "spark",
-    ejemplo: true,
+      "Un juego en 2D con vista desde arriba, con vibración y sonido, perfiles de jugador, récords y ranking. Los efectos y el motor del juego los armé con Skia y Reanimated.",
+    rol: "Diseño del juego y desarrollo completo.",
+    stack: ["React Native", "Expo", "TypeScript", "Skia", "Reanimated"],
+    color: "#D81B60",
+    texto: "#FFFFFF",
+    icono: "flag",
+    codigo: "https://github.com/MairaJulian/vuelta-rapida",
   },
 ];
 
@@ -124,22 +116,28 @@ export const proceso = [
   },
 ];
 
-export const sobreMi = {
-  bio: "Desarrollo aplicaciones móviles con React Native y TypeScript, y también sitios web. Me importa que lo que construyo sea claro de usar y fácil de mantener. Trabajo en equipo en relación de dependencia y también con clientes que necesitan una app o una web a medida.",
+export const sobreMi: {
+  bio: string;
+  habilidades: { grupo: string; items: string[] }[];
+  experiencia: Experiencia[];
+} = {
+  bio: "Desarrollo aplicaciones móviles con React Native y TypeScript. Hace un año y medio que trabajo en el equipo de app de una empresa, en una aplicación que gestiona sistemas de riego. Fuera del trabajo hago proyectos propios y estoy sumando trabajos freelance de apps, sitios web y automatizaciones. Me importa que lo que construyo sea claro de usar y fácil de mantener.",
   habilidades: [
-    { grupo: "Móvil", items: ["React Native"] },
+    { grupo: "Móvil", items: ["React Native", "Expo"] },
     { grupo: "Lenguajes", items: ["TypeScript", "JavaScript"] },
     { grupo: "Web", items: ["React", "Next.js", "Tailwind CSS"] },
-    { grupo: "Herramientas", items: ["Git", "GitHub"] },
+    { grupo: "Gráficos y animación", items: ["React Native Skia", "Reanimated"] },
+    { grupo: "Datos", items: ["Firebase", "SQLite"] },
+    { grupo: "Calidad", items: ["Jest", "ESLint", "Prettier"] },
+    { grupo: "Herramientas", items: ["Git", "GitHub", "Claude Code"] },
   ],
   experiencia: [
     {
-      puesto: "Desarrolladora móvil",
-      lugar: "Nombre de la empresa",
-      periodo: "Desde 20XX",
+      puesto: "Desarrolladora de app móvil",
+      lugar: "Equipo de app",
+      periodo: "Desde 2025",
       detalle:
-        "Apps con React Native y TypeScript. Contá acá un logro concreto: qué construiste y qué mejoró.",
-      ejemplo: true,
+        "Desarrollo de una aplicación que gestiona sistemas de riego, con React Native y TypeScript.",
     },
   ],
 };
