@@ -2,19 +2,42 @@ import { proyectos } from "@/content/site";
 import type { Proyecto } from "@/content/site";
 
 function Maqueta({ p }: { p: Proyecto }) {
+  const horizontal = p.orientacion === "horizontal";
+
   return (
     <div
-      className="relative flex aspect-[4/3] items-end justify-center overflow-hidden rounded-[2rem] border-2 border-tinta shadow-[8px_8px_0_0_var(--color-tinta)]"
+      className={`relative flex aspect-[4/3] justify-center overflow-hidden rounded-[2rem] border-2 border-tinta shadow-[8px_8px_0_0_var(--color-tinta)] ${
+        horizontal ? "items-center" : "items-end"
+      }`}
       style={{ background: p.color }}
     >
-      <div className="h-[86%] w-[46%] min-w-[150px] overflow-hidden rounded-t-[1.75rem] border-2 border-b-0 border-tinta bg-white">
+      <div
+        className={
+          horizontal
+            ? "aspect-[19.5/9] w-[84%] overflow-hidden rounded-[1.75rem] border-2 border-tinta bg-white"
+            : "h-[86%] w-[46%] min-w-[150px] overflow-hidden rounded-t-[1.75rem] border-2 border-b-0 border-tinta bg-white"
+        }
+      >
         {p.imagen ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={p.imagen}
             alt={`Captura de ${p.nombre}`}
-            className="h-full w-full object-cover object-top"
+            className={`h-full w-full object-cover ${
+              horizontal ? "object-center" : "object-top"
+            }`}
           />
+        ) : horizontal ? (
+          <div
+            className="relative flex h-full w-full items-center justify-center bg-tinta"
+            aria-hidden="true"
+          >
+            <div className="h-[64%] w-[74%] rounded-full border-[10px] border-white/90" />
+            <span
+              className="absolute left-[13%] top-1/2 h-3 w-7 -translate-y-1/2 rounded-sm"
+              style={{ background: p.color }}
+            />
+          </div>
         ) : (
           <div className="flex h-full flex-col gap-3 p-4" aria-hidden="true">
             <div className="h-3 w-1/2 rounded-full bg-tinta" />

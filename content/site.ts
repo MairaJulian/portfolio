@@ -20,6 +20,7 @@ export type Proyecto = {
   imagen?: string; // ej: "/proyectos/changuito.png" (archivo dentro de /public)
   demo?: string;
   codigo?: string;
+  orientacion?: "vertical" | "horizontal"; // forma del marco de la captura (por defecto, vertical)
   ejemplo?: boolean;
 };
 
@@ -40,7 +41,7 @@ export const site = {
     "Desarrollo apps con React Native y sitios web a medida. También conecto herramientas y sumo IA para automatizar tareas repetitivas.",
   email: "mairabetianajulianbarros@gmail.com",
   github: "https://github.com/MairaJulian",
-  linkedin: "https://www.linkedin.com/in/tu-usuario", // pendiente: poné tu link real
+  linkedin: "https://www.linkedin.com/in/maira-julian-768a001b0/",
   cv: "/cv.pdf", // poné tu CV en la carpeta /public con este nombre
 };
 
@@ -59,6 +60,7 @@ export const proyectos: Proyecto[] = [
     color: "#2FCB9E",
     texto: "#20204A",
     icono: "cart",
+    imagen: "/proyectos/changuito.jpg",
     codigo: "https://github.com/MairaJulian/lista-de-compras",
   },
   {
@@ -75,6 +77,8 @@ export const proyectos: Proyecto[] = [
     color: "#D81B60",
     texto: "#FFFFFF",
     icono: "flag",
+    orientacion: "horizontal",
+    imagen: "/proyectos/vuelta-rapida.jpg",
     codigo: "https://github.com/MairaJulian/vuelta-rapida",
   },
 ];
