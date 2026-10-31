@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme static {
+  --color-lienzo: #f3f1fb;
+  --color-tinta: #20204a;
+  --color-fucsia: #d81b60;
+  --color-menta: #2fcb9e;
+  --color-sol: #ffc857;
+}
+
+@theme inline {
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-lienzo);
+  color: var(--color-tinta);
+  font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-fucsia);
+  outline-offset: 3px;
+}
+
+.sobre-tinta :focus-visible {
+  outline-color: var(--color-sol);
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid var(--color-tinta);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  transition: transform 0.15s ease, background-color 0.15s ease,
+    color 0.15s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-primary {
+  background: var(--color-fucsia);
+  border-color: var(--color-fucsia);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-tinta);
+  border-color: var(--color-tinta);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--color-tinta);
+}
+.btn-secondary:hover {
+  background: var(--color-tinta);
+  color: var(--color-lienzo);
+}
+.btn-oscuro {
+  background: var(--color-tinta);
+  color: var(--color-lienzo);
+}
+.btn-oscuro:hover {
+  background: var(--color-fucsia);
+  border-color: var(--color-fucsia);
+}
+
+.chip {
+  display: inline-block;
+  border: 2px solid currentColor;
+  border-radius: 9999px;
+  padding: 0.15rem 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* El teléfono del inicio: el único momento animado de la página */
+.phone {
+  transform: rotate(3deg);
+  transition: transform 0.35s ease;
+  animation: phone-in 0.7s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+.phone:hover,
+.phone:focus-within {
+  transform: rotate(0deg);
+}
+
+.icon-pop {
+  animation: icon-pop 0.5s cubic-bezier(0.2, 1.5, 0.4, 1) both;
+  animation-delay: calc(var(--i) * 110ms + 450ms);
+}
+
+.app-open {
+  animation: app-open 0.32s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+
+@keyframes phone-in {
+  from {
+    opacity: 0;
+    transform: translateY(48px) rotate(9deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(3deg);
+  }
+}
+
+@keyframes icon-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes app-open {
+  from {
+    opacity: 0;
+    transform: scale(0.15);
+    border-radius: 2rem;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .phone,
+  .icon-pop,
+  .app-open {
+    animation: none;
+  }
+  .phone,
+  .btn {
+    transition: none;
+  }
+}
