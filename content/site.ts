@@ -125,7 +125,7 @@ export const sobreMi: {
   habilidades: { grupo: string; items: string[] }[];
   experiencia: Experiencia[];
 } = {
-  bio: "Desarrollo aplicaciones móviles con React Native y TypeScript. Hace un año y medio que trabajo en el equipo de app de una empresa, en una aplicación que gestiona sistemas de riego. Fuera del trabajo hago proyectos propios y estoy sumando trabajos freelance de apps, sitios web y automatizaciones. Me importa que lo que construyo sea claro de usar y fácil de mantener.",
+  bio: "Soy Tech Lead Mobile en Spherag, donde desarrollo una app que gestiona sistemas de riego con React Native y TypeScript. Fuera del trabajo hago proyectos propios y estoy sumando trabajos freelance de apps, sitios web y automatizaciones. Me importa que lo que construyo sea claro de usar y fácil de mantener.",
   habilidades: [
     { grupo: "Móvil", items: ["React Native", "Expo"] },
     { grupo: "Lenguajes", items: ["TypeScript", "JavaScript"] },
@@ -137,11 +137,25 @@ export const sobreMi: {
   ],
   experiencia: [
     {
-      puesto: "Desarrolladora de app móvil",
-      lugar: "Equipo de app",
-      periodo: "Desde 2025",
+      puesto: "Tech Lead Mobile",
+      lugar: "Spherag",
+      periodo: "Jun 2025 – Actualidad",
       detalle:
-        "Desarrollo de una aplicación que gestiona sistemas de riego, con React Native y TypeScript.",
+        "Desarrollo una app móvil para gestionar sistemas de riego, con React Native y TypeScript, en un equipo de 4 personas. Reviso código de forma constante, genero y publico versiones en Google Play Console y App Store Connect, y trabajo en contacto permanente con producto y diseño.",
+    },
+    {
+      puesto: "Tutora de React Native",
+      lugar: "Coderhouse",
+      periodo: "Ene 2024 – Jun 2025",
+      detalle:
+        "Acompañé a estudiantes en el desarrollo de apps con React Native: dudas, debugging y seguimiento de sus proyectos.",
+    },
+    {
+      puesto: "Frontend Developer",
+      lugar: "Freelance",
+      periodo: "Jun 2022 – Ene 2024",
+      detalle:
+        "Apps y sitios web con React y JavaScript: interfaces responsive, integración con APIs y mantenimiento de aplicaciones existentes.",
     },
   ],
 };
