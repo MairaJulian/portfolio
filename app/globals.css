@@ -14,7 +14,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  color-scheme: only light;
 }
 
 body {

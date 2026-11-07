@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 // El sitio se diseñó solo en claro: evita que el navegador lo oscurezca solo.
 export const viewport: Viewport = {
-  colorScheme: "light",
+  colorScheme: "only light",
 };
 
 export default function RootLayout({
