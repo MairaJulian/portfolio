@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     description: site.descripcion,
     images: ["/og.png"],
   },
+};
+
+// El sitio se diseñó solo en claro: evita que el navegador lo oscurezca solo.
+export const viewport: Viewport = {
+  colorScheme: "light",
 };
 
 export default function RootLayout({
